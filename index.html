@@ -3,13 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neon Futuristic Clock</title>
+    <title>McLaren F1 Countdown</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="clock-container">
-        <div class="clock"></div>
+        <img src="https://cdn.worldvectorlogo.com/logos/mclaren-racing-logo.svg" alt="Red Bull Racing Logo" class="logo">
+        <h1 id="race-name">Next Race: TBD</h1>
+        <h2 id="current-time">Current Time: TBD</h2>
+        <div id="countdown" class="countdown">
+            <div><span id="days">00</span><p>Days</p></div>
+            <div><span id="hours">00</span><p>Hours</p></div>
+            <div><span id="minutes">00</span><p>Minutes</p></div>
+            <div><span id="seconds">00</span><p>Seconds</p></div>
+        </div>
+        <div class="button-container">
+            <a href="https://www.formula1.com" target="_blank" class="wheel-button">
+                <img src="https://cdn.worldvectorlogo.com/logos/f1-1.svg" alt="F1 Logo">
+            </a>
+            <a href="https://www.redbullracing.com" target="_blank" class="wheel-button">
+                <img src="https://cdn.worldvectorlogo.com/logos/aston-martin-red-bull-racing-logo-1.svg" alt="Red Bull Logo">
+            </a>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
+
