@@ -5,7 +5,16 @@ async function fetchNextRace() {
 
     return {
         name: `${race.raceName} - ${race.Circuit.circuitName}`,
-        date: new Date(`${race.date}T${race.time}`)
+        date: new Date(`${race.date}T${race.time}`),
+        circuit: race.Circuit.circuitName,
+        location: `${race.Circuit.Location.locality}, ${race.Circuit.Location.country}`,
+        coordinates: [race.Circuit.Location.lat, race.Circuit.Location.long],
+        practices: [
+            { name: "First Practice", date: new Date(`${race.FirstPractice.date}T${race.FirstPractice.time}`) },
+            { name: "Second Practice", date: new Date(`${race.SecondPractice.date}T${race.SecondPractice.time}`) },
+            { name: "Third Practice", date: new Date(`${race.ThirdPractice.date}T${race.ThirdPractice.time}`) },
+        ],
+        qualifying: new Date(`${race.Qualifying.date}T${race.Qualifying.time}`)
     };
 }
 
@@ -18,6 +27,12 @@ async function updateRaceData() {
     const raceData = await fetchNextRace();
 
     document.getElementById("race-name").innerText = `Next Race: ${raceData.name}`;
+    document.getElementById("circuit-name").innerText = `Circuit: ${raceData.circuit}`;
+    document.getElementById("location").innerText = `Location: ${raceData.location}`;
+    document.getElementById("first-practice").innerText = `First Practice: ${raceData.practices[0].date.toLocaleString()}`;
+    document.getElementById("second-practice").innerText = `Second Practice: ${raceData.practices[1].date.toLocaleString()}`;
+    document.getElementById("third-practice").innerText = `Third Practice: ${raceData.practices[2].date.toLocaleString()}`;
+    document.getElementById("qualifying").innerText = `Qualifying: ${raceData.qualifying.toLocaleString()}`;
 
     function updateCountdown() {
         const now = new Date().getTime();
@@ -39,8 +54,21 @@ async function updateRaceData() {
         }
     }
 
+    // Initialize Leaflet map
+    const map = L.map('map').setView(raceData.coordinates, 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Add marker to map
+    L.marker(raceData.coordinates).addTo(map)
+        .bindPopup(`${raceData.circuit}<br>${raceData.location}`)
+        .openPopup();
+
     setInterval(updateCountdown, 1000);
     setInterval(updateCurrentTime, 1000); // Update current time every second
+  
+  
 }
 
 updateRaceData();
