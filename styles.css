@@ -13,6 +13,7 @@ body {
     flex-direction: column;
     background: linear-gradient(to right, #282828 50%, #FF8700 50%); /* Split background */
     color: #ffffff; /* White text */
+    overflow-y: auto;
 }
 
 .clock-container {
@@ -27,6 +28,8 @@ body {
     border: 7px solid #f5f5f5; /* Red Bull Racing Red border */
     max-width: 600px;
     width: 90%;
+    max-height: 70vh; /* Ensure the container doesn't block the page */
+    overflow-y: auto; /* Allow scrolling inside the container if needed */
 }
 
 .logo {
@@ -40,6 +43,28 @@ h1, h2 {
     font-family: "Racing Sans One", sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+
+/* Existing styles here */
+
+/* Existing styles here */
+
+#race-details {
+    margin-bottom: 20px;
+}
+
+#race-details h3, #race-details p {
+    color: grey; /* Lighter grey text */
+    margin: 5px 0;
+    font-size: 1em;
+    font-weight: 300; /* Light font weight */
+}
+
+/* Existing styles continue */
+
+#map {
+  border-radius: 5px;
+  border: 3px solid #FF8700; 
 }
 
 .countdown {
@@ -123,3 +148,5 @@ h1, h2 {
         font-size: 1.5em;
     }
 }
+
+
