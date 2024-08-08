@@ -1,20 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@400;600&family=Racing+Sans+One&display=swap');
+
 body {
+    font-family: "Racing Sans One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     margin: 0;
     padding: 0;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #111;
+    height: 100vh;
+    flex-direction: column;
+    background: linear-gradient(to right, #282828 50%, #FF8700 50%); /* Split background */
+    color: #ffffff; /* White text */
 }
 
 .clock-container {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 5em;
-    color: #0ff; /* Fluorescent cyan */
+    font-family: "Racing Sans One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    background: #f5f5f5; /* Slightly lighter grey for the container */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    border: 7px solid #f5f5f5; /* Red Bull Racing Red border */
+    max-width: 600px;
+    width: 90%;
 }
 
-.clock {
-    display: inline-block;
-    text-shadow: 0 0 10px #0ff; /* Neon glow effect */
+.logo {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: #282828; /* Yellow */
+    margin-bottom: 20px;
+    font-family: "Racing Sans One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.countdown {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #FF8700;
+}
+
+.countdown div {
+    text-align: center;
+    width: 25%;
+}
+
+.countdown p {
+    margin: 5px 0 0 0;
+    font-size: 0.6em;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.wheel-button {
+    background: #282828; /* Black */
+    border: 6px solid #FF8700; /* Red Bull Racing Red */
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.wheel-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.wheel-button img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .countdown {
+        flex-direction: column;
+        font-size: 1.5em;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wheel-button {
+        width: 80px;
+        height: 80px;
+        margin: 10px 0;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    h1, h2 {
+        font-size: 1.5em;
+    }
 }
