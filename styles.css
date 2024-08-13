@@ -45,10 +45,6 @@ h1, h2 {
     font-style: normal;
 }
 
-/* Existing styles here */
-
-/* Existing styles here */
-
 #race-details {
     margin-bottom: 20px;
 }
@@ -126,9 +122,50 @@ h1, h2 {
 }
 
 @media (max-width: 768px) {
-    .countdown {
+    body {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 10px;
+        background: linear-gradient(to bottom, #282828 50%, #FF8700 50%);
+        height: auto;
+    }
+
+    .clock-container {
+        width: 100%;
+        max-height: none;
+        padding: 15px;
+        box-shadow: none;
+        border: none;
+    }
+
+    .logo {
+        width: 150px;
+        margin-bottom: 15px;
+    }
+
+    h1, h2 {
+        font-size: 1.5em;
+    }
+
+    #countdown {
         flex-direction: column;
         font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    .countdown div {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #map {
+        height: 250px;
+        margin-top: 15px;
+        border: 2px solid #FF8700;
+    }
+
+    #race-details h3, #race-details p {
+        font-size: 0.9em;
     }
 
     .button-container {
@@ -141,14 +178,28 @@ h1, h2 {
         height: 80px;
         margin: 10px 0;
     }
+}
 
+@media (max-width: 480px) {
     .logo {
-        width: 150px;
+        width: 120px;
     }
 
     h1, h2 {
-        font-size: 1.5em;
+        font-size: 1.2em;
+    }
+
+    .countdown {
+        font-size: 1.2em;
+    }
+
+    .wheel-button {
+        width: 70px;
+        height: 70px;
+        font-size: 14px;
+    }
+
+    #map {
+        height: 200px;
     }
 }
-
-
