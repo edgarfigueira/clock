@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@400;600&family=Racing+Sans+One&display=swap');
+
+body {
+    font-family: "Racing Sans One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background: linear-gradient(to right, #121F45 50%, #223971 50%);
+    color: #121F45;
+    overflow-y: auto;
+}
+
+.clock-container {
+    font-family: "Racing Sans One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgb(218, 13, 27);
+    border: 7px solid #CC1E4A; /* Dark grey border */
+    max-width: 600px;
+    width: 90%;
+    max-height: 70vh;
+    overflow-y: auto; /* Allow scrolling if necessary */
+}
+
+.logo {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: #223971; /* Red Bull Blue */
+    margin-bottom: 20px;
+    font-family: "Racing Sans One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Countdown and race details styles */
+.countdown {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #CC1E4A; /* Red Bull Yellow */
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.countdown div {
+    text-align: center;
+    width: 22%;
+}
+
+.countdown p {
+    margin: 5px 0 0 0;
+    font-size: 0.6em;
+}
+
+#race-details {
+    margin-bottom: 20px;
+}
+
+#race-details h3, #race-details p {
+    color: grey; /* Lighter grey text */
+    margin: 5px 0;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+#map {
+  border-radius: 5px;
+  border: 3px solid #FFCC00; /* Yellow border */
+  height: 300px; 
+  margin-top: 20px;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 10px;
+        background: linear-gradient(to bottom, #1E1E1E 50%, #1437FF 50%);
+        height: auto;
+    }
+
+    .clock-container {
+        width: 100%;
+        padding: 15px;
+        box-shadow: none;
+        border: none;
+    }
+
+    .logo {
+        width: 150px;
+        margin-bottom: 15px;
+    }
+
+    h1, h2 {
+        font-size: 1.5em;
+    }
+
+    .countdown {
+        font-size: 1.5em;
+        justify-content: space-between;
+        overflow-x: auto;
+    }
+
+    .countdown div {
+        width: auto;
+        flex: 1;
+    }
+
+    #map {
+        height: 250px;
+        margin-top: 15px;
+        border: 2px solid #FFCC00;
+    }
+
+    #race-details h3, #race-details p {
+        font-size: 0.9em;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wheel-button {
+        width: 80px;
+        height: 80px;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 120px;
+    }
+
+    h1, h2 {
+        font-size: 1.2em;
+    }
+
+    .countdown {
+        font-size: 1.2em;
+    }
+
+    .wheel-button {
+        width: 70px;
+        height: 70px;
+        font-size: 14px;
+    }
+
+    #map {
+        height: 200px;
+    }
+}
+

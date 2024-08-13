@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@400;600&family=Racing+Sans+One&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Racing Sans One", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1f1f1f; /* F1 black background */
+    color: #f5f5f5;
+}
+
+.landing-container {
+    text-align: center;
+}
+
+.f1-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #E10600; /* F1 red */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.landing-button {
+    background: #E10600; /* F1 red */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-position 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+
+.landing-button:hover {
+    background-position: left bottom;
+    color: grey;
+}
+
+/* McLaren Button */
+.landing-button[href="mc_clock.html"] {
+    background-image: linear-gradient(to left, #E10600 50%, #FF8700 50%); /* Red to McLaren Papaya */
+}
+
+.landing-button[href="mc_clock.html"]:hover {
+    color: grey;
+}
+
+/* Red Bull Button */
+.landing-button[href="rb_clock.html"] {
+    background-image: linear-gradient(to left, #E10600 50%, #223971 50%); /* Red to Navy Blue */
+}
+
+.landing-button[href="rb_clock.html"]:hover {
+    color: #FFCC00; /* Red text */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+
+    .landing-button {
+        font-size: 1em;
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .landing-button {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+
+    .f1-logo {
+        width: 120px;
+    }
+}
