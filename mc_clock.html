@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAdVBMVEX/mAD/////lgD/kQD/kwD/lQD/kAD/nyL/0aP//vv/6tX/+/X/7Nj/9+7/+fH/+/b/s2D/2bT/rVD/wYL/1Kr/yZP/u3P/r1T/797/qUX/s1//xIr/zJn/377/uW7/t2n/4cP/ozP/pDj/17H/nRf/qkj/5czSUujCAAAEu0lEQVR4nO3b2XaqMBQGYM7OIKIoKohjxaG+/yOeIFonVNRAIOv/rrp60fqvJHsnEB0HAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKBadCBSh59Mfx5tSHDOUk7rdzYLgmAVBLNZvCb1K84bnZNIRZN8E8zdped3/t3xvcF8yFkjU6bZWGs2H3i9+2A3uu5UNiqkCidpOtp22y+znQdz4bBGZFTTkrHNaDApnu3P1uGmP/4Lqp5IEbjeGyN3YyRNZ3gsTef8hJ8M3aWkpjNVzUwKvk534DHTYe6QYGy68HSkO1jWa6KqwXPGy5w294UfYTrVH+JyHXW1pkv1ajKIKt4w9LXHS61qMIhqOzkb9EuJpyxNF5tDvM9b3mu+0YSqtMTljV6mbS6hWnvTUG/hzGUoIQnZWpRTWmqRkBiN9DeGfL3qE6rFN0sqiqd0q06oZqf7+gyrUVjpGUoN31jfnrOYKju+kOuwzM6Xr7IhNDF8qaSiZUhs55bc2R+IKzkDq211hcXzil/B0UJNz5GW8/pHxqXXGWKOW311+VP6tpvkZmku3r/SW4WQMxPV80K31FXI5djc8jtal1dIVXmZV7o3y+WWtgqJi8hgeTkprVMQJ5Pl82xTzhxN24PpaJmolDmajp/pZEf7MuaoWn91yfevX8ZbfS4WpnOdbfT3es7rUD9PxtqPhYKNzJyO8rm6FyHJn2qeDBaUaA5IMi6yP+v5k32yHITuIuWG22XiTUrZ+Ez09glim/2T/9aZJGE0nq0dluFn2S+c4XiRaN3B+kJrGeXO4EE0bxCtjteUxJMbWUSCMyl+o72mQtV3dAYULKdB9L3taOgckxX9S2qvzuOthtcY7ZbGgKrA3Hykzn6xasn0ctkn/4a4DJ7N+EI0NkJi06vl47mrnQr33SIQsvXdU4GpvkbInfNH6STzKfs23BGx9RdPBvQFJDY//s1+Ml8zrbcBSY4+DfirKyDJYdbhu4up3nQZvv6sT2obwWyCtpc/VNYlR6JP9ki6ApJUE9QPh5Lp7azX/4TeHsX2WlNA9uu3w03pN1Sp9WbATktPm6BdmMSV3DLm75UbX9dOZreq7O6tfGezOtF3pK/uwqaYFQ/o1fQi6QuycD1dykYGdHjRx1qLmtw/fBsNiwWs83XuF1ihgLHpy4dfKLIQO7r6vBHs9c0wjV3CBPbyONzUInryMmHU3BqTYS+OwkGDa0yGPd239VpNrjEZ+ez54r5R37/LR86TgG7Da8yBCB4HXDV+CaYe70t9C5Zg6mHDr+uX7t5F9CDgvOld8ESMc/N1plYswVT+jmZPNfimlh75vSKyoUkc8eg+X3tozQx1cg+HFs1QRaysnqGKvG2GPXtq6MHdU6iE2zRDFXlzNBzbNUPVEMZX+SaW7EMvXL+zsOKkdI1fbtj6TX4g+gi/uMSSCMtKTIpdHAytKzGpi9e/3Z11JSZ1bvaW7WJO/l5vT9YWlhjn4tTkWvKs4o7MDr6+ZdvQs+Mc3do6gMc62rOxyR8dtmsD284RF9Je34nt7BEHIrZ7ANNGYfUApu8LrR5ANUejwJbn9Q9ZPYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoMV/qXM8w5WrBfoAAAAASUVORK5CYII=">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McLaren F1 Racing Countdown</title>
+    <link rel="stylesheet" href="styles/mc_clock.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <div class="clock-container">
+        <img src="https://cdn.worldvectorlogo.com/logos/mclaren-racing-logo.svg" alt="Red Bull Racing Logo" class="logo">
+        <h1 id="race-name">Next Race: TBD</h1>
+        <h2 id="current-time">Current Time: TBD</h2>
+        <div id="countdown" class="countdown">
+            <div><span id="days">00</span><p>Days</p></div>
+            <div><span id="hours">00</span><p>Hours</p></div>
+            <div><span id="minutes">00</span><p>Minutes</p></div>
+            <div><span id="seconds">00</span><p>Seconds</p></div>
+        </div>
+        <div id="race-details">
+            <h3 id="circuit-name">Circuit: TBD</h3>
+            <p id="location">Location: TBD</p>
+            <p id="first-practice">First Practice: TBD</p>
+            <p id="second-practice">Second Practice: TBD</p>
+            <p id="third-practice">Third Practice: TBD</p>
+            <p id="qualifying">Qualifying: TBD</p>
+        </div>
+        <div id="map"></div>
+    </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="js/mc_clock.js"></script>
+</body>
+</html>

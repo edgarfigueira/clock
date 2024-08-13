@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="data:image/png;base64, your_red_bull_favicon_base64_here">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Bull Racing Countdown</title>
+    <link rel="icon" href="https://www.svgrepo.com/show/303227/redbull-logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/rb_clock.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <div class="clock-container">
+        <img src="https://www.svgrepo.com/show/303227/redbull-logo.svg" alt="Red Bull Racing Logo" class="logo">
+        <h1 id="race-name">Next Race: TBD</h1>
+        <h2 id="current-time">Current Time: TBD</h2>
+        <div id="countdown" class="countdown">
+            <div><span id="days">00</span><p>Days</p></div>
+            <div><span id="hours">00</span><p>Hours</p></div>
+            <div><span id="minutes">00</span><p>Minutes</p></div>
+            <div><span id="seconds">00</span><p>Seconds</p></div>
+        </div>
+        <div id="race-details">
+            <h3 id="circuit-name">Circuit: TBD</h3>
+            <p id="location">Location: TBD</p>
+            <p id="first-practice">First Practice: TBD</p>
+            <p id="second-practice">Second Practice: TBD</p>
+            <p id="third-practice">Third Practice: TBD</p>
+            <p id="qualifying">Qualifying: TBD</p>
+        </div>
+        <div id="map"></div>
+    </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="js/rb_clock.js"></script>
+</body>
+</html>
+
