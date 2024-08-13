@@ -72,11 +72,12 @@ h1, h2 {
     font-weight: bold;
     margin-bottom: 30px;
     color: #FF8700;
+    flex-wrap: nowrap;
 }
 
 .countdown div {
     text-align: center;
-    width: 25%;
+    width: 22%;
 }
 
 .countdown p {
@@ -148,14 +149,14 @@ h1, h2 {
     }
 
     #countdown {
-        flex-direction: column;
         font-size: 1.5em;
-        margin-bottom: 20px;
+        justify-content: space-between;
+        overflow-x: auto; /* Allow horizontal scrolling if necessary */
     }
 
     .countdown div {
-        width: 100%;
-        margin-bottom: 10px;
+        width: auto; /* Allow divs to size based on content */
+        flex: 1; /* Distribute available space */
     }
 
     #map {
