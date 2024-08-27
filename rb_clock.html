@@ -1,36 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red Bull Racing Countdown</title>
-    <link rel="icon" href="https://www.svgrepo.com/show/303227/redbull-logo.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles/rb_clock.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
-</head>
-<body>
-    <div class="clock-container">
-        <img src="https://www.svgrepo.com/show/303227/redbull-logo.svg" alt="Red Bull Racing Logo" class="logo">
-        <h1 id="race-name">Next Race: TBD</h1>
-        <h2 id="current-time">Current Time: TBD</h2>
-        <div id="countdown" class="countdown">
-            <div><span id="days">00</span><p>Days</p></div>
-            <div><span id="hours">00</span><p>Hours</p></div>
-            <div><span id="minutes">00</span><p>Minutes</p></div>
-            <div><span id="seconds">00</span><p>Seconds</p></div>
-        </div>
-        <div id="race-details">
-            <h3 id="circuit-name">Circuit: TBD</h3>
-            <p id="location">Location: TBD</p>
-            <p id="first-practice">First Practice: TBD</p>
-            <p id="second-practice">Second Practice: TBD</p>
-            <p id="third-practice">Third Practice: TBD</p>
-            <p id="qualifying">Qualifying: TBD</p>
-        </div>
-        <div id="map"></div>
-    </div>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="js/rb_clock.js"></script>
-</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Red Bull Racing F1 Dashboard</title>
+	<link rel="icon" href="https://www.svgrepo.com/show/303227/redbull-logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/rb_clock.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <header class="header">
+        <a href="index.html" class="home-button">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 3V1L2 12H4V22H10V16H14V22H20V12H22L12 3Z"
+              fill="white"
+            />
+          </svg>
+        </a>
+        <img
+          src="https://www.svgrepo.com/show/303227/redbull-logo.svg"
+          alt="RedBull Racing Logo"
+          class="logo"
+        />
+        <h1>RedBull Racing F1 Dashboard</h1>
+        <div id="current-time">Loading...</div>
+      </header>
 
+      <section class="widget countdown-widget">
+        <h2>Race Countdown</h2>
+        <div id="countdown" class="countdown">
+          <div>
+            <span id="days">00</span>
+            <p>Days</p>
+          </div>
+          <div>
+            <span id="hours">00</span>
+            <p>Hours</p>
+          </div>
+          <div>
+            <span id="minutes">00</span>
+            <p>Minutes</p>
+          </div>
+          <div>
+            <span id="seconds">00</span>
+            <p>Seconds</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="race-details-widget">
+        <h2>Upcoming Race</h2>
+        <table class="race-details-table">
+          <tr>
+            <th>Season</th>
+            <td id="season"></td>
+          </tr>
+          <tr>
+            <th>Round</th>
+            <td id="round"></td>
+          </tr>
+          <tr>
+            <th>Race Name</th>
+            <td id="race-name"></td>
+          </tr>
+          <tr>
+            <th>Circuit Name</th>
+            <td id="circuit-name"></td>
+          </tr>
+          <tr>
+            <th>Location</th>
+            <td id="location"></td>
+          </tr>
+          <tr>
+            <th>First Practice</th>
+            <td id="first-practice"></td>
+          </tr>
+          <tr>
+            <th>Second Practice</th>
+            <td id="second-practice"></td>
+          </tr>
+          <tr>
+            <th>Third Practice</th>
+            <td id="third-practice"></td>
+          </tr>
+          <tr>
+            <th>Qualifying</th>
+            <td id="qualifying"></td>
+          </tr>
+        </table>
+      </div>
+
+      <section class="widget map-widget">
+        <h2>Track Location</h2>
+        <div id="map"></div>
+        <div id="controls"></div>
+      </section>
+
+      <section class="widget standings-widget">
+        <h2>Drivers Leaderboard</h2>
+        <div id="drivers-leaderboard">
+          <ul id="drivers-list">
+            <!-- Constructor results will be dynamically inserted here -->
+          </ul>
+        </div>
+      </section>
+
+      <section class="widget standings-widget">
+        <h2>Constructors Leaderboard</h2>
+        <div id="constructors-leaderboard">
+          <ul id="constructors-list">
+            <!-- Constructor results will be dynamically inserted here -->
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <p>
+        Made with Soft Tyres for the F1 community &copy; <span id="year"></span>
+      </p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tokml@0.4.2/tokml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/shp-write@0.3.5/shpwrite.min.js"></script>
+    <script src="js/rb_clock.js"></script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Race Results</title>
+    <link rel="stylesheet" href="styles/last_rs.css">
+</head>
+<body>
+    <header class="header">
+        <h1>F1 Race Results</h1>
+        <h4 id="race-name"></h4> <!-- New element for race name -->
+        <a href="index.html" class="home-button">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 3V1L2 12H4V22H10V16H14V22H20V12H22L12 3Z"
+                fill="white"
+              />
+            </svg>
+          </a>
+    </header>
+    <main>
+        <section class="results-container">
+            <table id="results-table">
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Number</th>
+                        <th>Driver</th>
+                        <th>Constructor</th>
+                        <th>Laps</th>
+                        <th>Grid</th>
+                        <th>Time</th>
+                        <th>Status</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="js/last_rs.js"></script>
+</body>
+</html>
