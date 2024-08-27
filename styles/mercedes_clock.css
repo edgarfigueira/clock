@@ -4,8 +4,8 @@ body {
     font-family: "Orbitron", sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #55596C, #353231); /* Dark Gray-Blue gradient */
-    color: #F6F6F7; /* Light Gray */
+    background: linear-gradient(to bottom, #3C3C3C, #1E1E1E); /* Dark Gray gradient */
+    color: #E0E0E0; /* Light Gray */
     overflow: hidden;
     box-sizing: border-box;
     display: flex;
@@ -22,9 +22,9 @@ body {
     justify-content: center;
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #FCD340, #BE2333); /* Yellow to Red gradient */
+    background: linear-gradient(135deg, #00D2BE, #000000); /* AMG Green to Black gradient */
     border-radius: 50%;
-    box-shadow: 0 0 15px rgba(252, 211, 64, 0.8), 0 0 20px rgba(190, 35, 51, 0.6); /* Glowing effect */
+    box-shadow: 0 0 15px rgba(0, 210, 190, 0.8), 0 0 20px rgba(0, 0, 0, 0.6); /* Glowing effect */
     text-decoration: none;
     color: white;
     transition: all 0.3s ease-in-out;
@@ -33,8 +33,8 @@ body {
 }
 
 .home-button:hover {
-    background: linear-gradient(135deg, #FA0F06, #FCD340); /* Red to Yellow gradient */
-    box-shadow: 0 0 20px rgba(250, 15, 6, 0.8), 0 0 25px rgba(252, 211, 64, 0.6);
+    background: linear-gradient(135deg, #000000, #00D2BE); /* Black to AMG Green gradient */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 210, 190, 0.6);
 }
 
 .dashboard-container {
@@ -62,12 +62,12 @@ body {
 h1 {
     font-size: 2.5rem;
     margin: 0;
-    color: #FCD340; /* Yellow */
-    text-shadow: 0 0 10px rgba(252, 211, 64, 0.8);
+    color: #00D2BE; /* AMG Green */
+    text-shadow: 0 0 10px rgba(0, 210, 190, 0.8);
 }
 
 .widget, .map-widget, .race-details-widget, .standings-widget {
-    background: rgba(53, 50, 49, 0.8); /* Semi-transparent Dark Gray */
+    background: rgba(30, 30, 30, 0.8); /* Semi-transparent Dark Gray */
     border-radius: 20px;
     padding: 20px;
     margin: 10px;
@@ -85,9 +85,9 @@ h1 {
 .widget h2, .race-details-widget h2, .standings-widget h2 {
     margin-bottom: 15px;
     font-size: 1.8rem;
-    border-bottom: 2px solid #FCD340; /* Yellow */
+    border-bottom: 2px solid #00D2BE; /* AMG Green */
     padding-bottom: 10px;
-    color: #FCD340; /* Yellow */
+    color: #00D2BE; /* AMG Green */
 }
 
 .countdown {
@@ -95,7 +95,7 @@ h1 {
     justify-content: space-between;
     font-size: 2rem;
     font-weight: bold;
-    color: #FA0F06; /* Red */
+    color: #00D2BE; /* AMG Green */
 }
 
 .countdown div {
@@ -123,14 +123,14 @@ h1 {
 }
 
 .race-details-table th {
-    background-color: #55596C; /* Gray-Blue */
-    color: #FCD340; /* Yellow */
+    background-color: #3C3C3C; /* Dark Gray */
+    color: #00D2BE; /* AMG Green */
     width: 30%;
 }
 
 .race-details-table td {
-    background-color: #353231; /* Dark Gray */
-    color: #F6F6F7; /* Light Gray */
+    background-color: #1E1E1E; /* Very Dark Gray */
+    color: #E0E0E0; /* Light Gray */
 }
 
 .completed-session {
@@ -151,7 +151,7 @@ h1 {
 }
 
 .standings-widget h2 {
-    color: #FCD340; /* Yellow */
+    color: #00D2BE; /* AMG Green */
     font-weight: 600;
 }
 
@@ -170,16 +170,16 @@ h1 {
 }
 
 #constructors-list li, #drivers-list li {
-    background: #BE2333; /* Red */
-    color: #F6F6F7; /* Light Gray */
+    background: #1E1E1E; /* Very Dark Gray */
+    color: #E0E0E0; /* Light Gray */
     margin: 5px 0;
     padding: 10px;
     border-radius: 10px;
 }
 
 .download-button {
-    background-color: #BE2333; /* Red */
-    color: #F6F6F7; /* Light Gray */
+    background-color: #00D2BE; /* AMG Green */
+    color: #1E1E1E; /* Very Dark Gray */
     border: none;
     padding: 10px 20px;
     border-radius: 10px;
@@ -190,11 +190,12 @@ h1 {
 }
 
 .download-button:hover {
-    background-color: #FCD340; /* Yellow */
+    background-color: #1E1E1E; /* Very Dark Gray */
+    color: #00D2BE; /* AMG Green */
 }
 
 footer {
-    color: #F6F6F7; /* Light Gray */
+    color: #E0E0E0; /* Light Gray */
     text-align: center;
     padding: 20px 0;
     width: 100%;
@@ -203,25 +204,7 @@ footer {
 footer p {
     margin: 0;
     font-size: 0.9rem;
-    color: #F6F6F7; /* Light Gray */
-}
-
-@media (max-width: 768px) {
-    .dashboard-container {
-        padding: 10px;
-    }
-
-    .header h1 {
-        font-size: 1.8rem;
-    }
-
-    .widget, .map-widget, .race-details-widget {
-        padding: 15px;
-    }
-
-    .countdown {
-        font-size: 1.8rem;
-    }
+    color: #E0E0E0; /* Light Gray */
 }
 
 /* Media Queries for screens smaller than 480px */
@@ -282,7 +265,7 @@ footer p {
 @media (max-width: 320px) {
     body {
         padding: 0 5px; /* Minimal padding */
-        font-size: 5px; /* Smaller base font size */
+        font-size: 12px; /* Smaller base font size */
     }
 
     .dashboard-container {
@@ -294,7 +277,7 @@ footer p {
     .widget, .map-widget, .race-details-widget, .standings-widget {
         width: 100%; /* Make widgets full-width */
         max-width: none;
-        padding: 1px; /* Adjust padding for better fit */
+        padding: 10px; /* Adjust padding for better fit */
         margin: 5px 0; /* Reduce margin between widgets */
     }
 
@@ -310,7 +293,7 @@ footer p {
     }
 
     .header h1 {
-        font-size: 1rem; /* Reduce header font size further */
+        font-size: 1.2rem; /* Reduce header font size further */
     }
 
     .logo {
@@ -331,5 +314,3 @@ footer p {
         height: 200px; /* Reduce map height */
     }
 }
-
-

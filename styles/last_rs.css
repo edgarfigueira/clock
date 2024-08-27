@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap");
+
+body {
+  font-family: "Racing Sans One", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #151515; /* Darker background for a racing feel */
+  color: #eaeaea; /* Light grey text color */
+}
+
+.header {
+  background-color: #202020; /* Dark grey header background */
+  color: #ff1b1b; /* F1 red accent */
+  padding: 15px;
+  text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #ff1b1b; /* F1 accent color border */
+}
+.home-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #ff007a, #ff8700); /* Neon gradient */
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(255, 0, 122, 0.8), 0 0 20px rgba(255, 135, 0, 0.6); /* Glowing effect */
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  font-size: 1.5rem;
+}
+
+.home-button:hover {
+  background: linear-gradient(135deg, #8700ff, #007aff); /* Change gradient on hover */
+  box-shadow: 0 0 20px rgba(135, 0, 255, 0.8), 0 0 25px rgba(0, 122, 255, 0.6);
+}
+
+.results-container {
+  padding: 15px;
+  max-width: 95%;
+  margin: 0 auto;
+  overflow-x: auto; /* Allows table to scroll horizontally if too wide */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  background-color: #1a1a1a; /* Dark background for table */
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 8px;
+  border: 1px solid #ff1b1b; /* F1 red accent for borders */
+  text-align: center;
+  font-size: 1rem;
+  color: #eaeaea; /* Text color */
+}
+
+th {
+  background-color: #101010; /* Darker background for headers */
+  text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+  background-color: #212121; /* Slightly lighter for contrast */
+}
+
+tr:hover {
+  background-color: #ff1b1b; /* Hover effect with F1 red accent */
+  color: #101010; /* Text color change on hover */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Adjusting the constructor cell */
+#results-table td {
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+
+#results-table th {
+  color: #fff;
+  font-weight: bold;
+  background-color: #444;
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+  #results-table th,
+  #results-table td {
+      padding: 8px;
+      font-size: 0.8rem;
+      text-align: left;
+      display: block;
+  }
+
+  #results-table tr {
+      display: block;
+      margin-bottom: 10px;
+      border: 1px solid #ff1b1b;
+  }
+
+  #results-table td {
+      border: none;
+      border-bottom: 1px solid #ff1b1b;
+      position: relative;
+      padding-left: 50%;
+  }
+
+  #results-table td:before {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      text-align: left;
+      font-weight: bold;
+      color: #ff1b1b;
+  }
+}
+
+
+
+@media (max-width: 768px) and (min-width: 481px) {
+  table {
+    width: 100%;
+    font-size: 0.9rem; /* Slightly smaller font for tablets */
+  }
+
+  th, td {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+
+  th {
+    font-size: 1rem;
+  }
+
+  tr {
+    display: table-row; /* Keep the table-row structure */
+    border: none;
+  }
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+  th,
+  td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .results-container {
+    padding: 10px;
+  }
+
+  table {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  table {
+    display: block;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent content from wrapping */
+  }
+
+  th, td {
+    padding: 6px;
+    font-size: 0.8rem;
+  }
+
+  tr {
+    display: table-row; /* Maintain row structure */
+    border: none;
+  }
+
+  th {
+    font-size: 0.9rem;
+  }
+}

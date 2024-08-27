@@ -14,6 +14,7 @@ body {
 
 .landing-container {
     text-align: center;
+    padding: 20px;
 }
 
 .f1-logo {
@@ -29,50 +30,184 @@ h1 {
 }
 
 .button-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px; /* Horizontal and vertical spacing between buttons */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 13px;
 }
 
 .landing-button {
-    background: #E10600; /* F1 red */
+    position: relative;
+    background: #E10600;
     color: #ffffff;
     text-decoration: none;
-    padding: 15px 30px;
+    padding: 15px;
     font-size: 1.2em;
     font-weight: 600;
     border-radius: 5px;
-    transition: color 0.3s ease, background-position 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-size: 200% 100%;
-    background-position: right bottom;
+    transition: transform 0.4s ease, color 0.4s ease, background 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 150px; /* Ensures buttons are at least 150px wide */
+    max-width: 200px; /* Limits button width to 200px */
+    white-space: nowrap; /* Prevents text wrapping */
+    overflow: hidden; /* Hides overflow text */
+    text-overflow: ellipsis; /* Adds ellipsis for overflow text */
+}
+
+.landing-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: transform 0.6s ease;
+    transform: translateX(-100%);
+    z-index: -1;
+}
+
+.landing-button:hover::before {
+    transform: translateX(100%);
 }
 
 .landing-button:hover {
-    background-position: left bottom;
-    color: grey;
+    color: #ffffff;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
 }
 
 /* McLaren Button */
 .landing-button[href="mc_clock.html"] {
-    background-image: linear-gradient(to left, #E10600 50%, #FF8700 50%); /* Red to McLaren Papaya */
+    background: linear-gradient(to right, #FF8700, #E10600);
 }
 
 .landing-button[href="mc_clock.html"]:hover {
-    color: grey;
+    background: #FF8700;
 }
 
 /* Red Bull Button */
 .landing-button[href="rb_clock.html"] {
-    background-image: linear-gradient(to left, #E10600 50%, #223971 50%); /* Red to Navy Blue */
+    background: linear-gradient(to right, #223971, #E10600);
 }
 
 .landing-button[href="rb_clock.html"]:hover {
-    color: #FFCC00; /* Red text */
+    background: #223971;
+    color: #FFCC00;
+}
+
+/* Ferrari Button */
+.landing-button[href="ferrari_clock.html"] {
+    background: linear-gradient(to right, #111111, #E10600);
+}
+
+.landing-button[href="ferrari_clock.html"]:hover {
+    background: #DC0000;
+    color: #FFFF00;
+}
+
+/* Mercedes Button */
+.landing-button[href="mercedes_clock.html"] {
+    background: linear-gradient(to right, #00D2BE, #E10600);
+}
+
+.landing-button[href="mercedes_clock.html"]:hover {
+    background: #00D2BE;
+    color: #FFFFFF;
+}
+
+/* Alpine Button */
+.landing-button[href="alpine_clock.html"] {
+    background: linear-gradient(to right, #0090FF, #E10600);
+}
+
+.landing-button[href="alpine_clock.html"]:hover {
+    background: #fd4bc7;
+    color: #ffffff;
+}
+
+/* Aston Martin Button */
+.landing-button[href="aston_martin_clock.html"] {
+    background: linear-gradient(to right, #006F62, #E10600);
+}
+
+.landing-button[href="aston_martin_clock.html"]:hover {
+    background: #006F62;
+    color: #ffffff;
+}
+
+/* Kick Sauber */
+.landing-button[href="kick_sauber_clock.html"] {
+    background: linear-gradient(to right, #00e701, #E10600);
+}
+
+.landing-button[href="kick_sauber_clock.html"]:hover {
+    background: #00e701;
+    color: #474f54;
+}
+
+/* RB Visa Button */
+.landing-button[href="rbvisa_clock.html"] {
+    background: linear-gradient(to right, #1432C6, #E10600);
+}
+
+.landing-button[href="rbvisa_clock.html"]:hover {
+    background: #1432C6;
+    color: #C9CCCA;
+}
+
+/* Haas Button */
+.landing-button[href="haas_clock.html"] {
+    background: linear-gradient(to right, #111111, #E10600);
+    color: #ffffff;
+}
+
+.landing-button[href="haas_clock.html"]:hover {
+    background: #da291c;
+    color: #ffffff;
+}
+
+/* Williams Button */
+.landing-button[href="williams_clock.html"] {
+    background: linear-gradient(to right, #00a3e0, #E10600);
+}
+
+.landing-button[href="williams_clock.html"]:hover {
+    background: #041e42;
+    color: #00a3e0;
+}
+
+/* Race Status Button */
+.landing-button[href="last_rs.html"] {
+    background: linear-gradient(to right, #080808, #E10600);
+}
+
+.landing-button[href="last_rs.html"]:hover {
+    background: #080808;
+    color: #ffffff;
 }
 
 /* Responsive design */
+@media (max-width: 1200px) {
+    .button-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .button-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     h1 {
         font-size: 2em;
@@ -81,7 +216,11 @@ h1 {
 
     .landing-button {
         font-size: 1em;
-        padding: 12px 25px;
+        padding: 12px;
+    }
+
+    .button-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -92,7 +231,11 @@ h1 {
 
     .landing-button {
         font-size: 0.9em;
-        padding: 10px 20px;
+        padding: 10px;
+    }
+
+    .button-container {
+        grid-template-columns: 1fr;
     }
 
     .f1-logo {
